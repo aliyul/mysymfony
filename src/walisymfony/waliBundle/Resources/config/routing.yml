@@ -1,0 +1,24 @@
+ _nasabah:
+   path:  /
+    defaults: { _controller: walisymfonywaliBundle:Nasabah:index,_locale: en}
+    requirements:
+            _locale: en
+   prefix:   /
+_nasabah_new:
+    resource: { _controller: walisymfonywaliBundle:Nasabah:new,_locale: en}
+
+    prefix:   /new
+    requirements:
+            _locale: en
+ _nasabah_edit:
+    resource: { _controller: walisymfonywaliBundle:Nasabah:edit,_locale: en}
+
+    prefix:   /edit
+    requirements:
+            _locale: en
+ _nasabah_delete:
+    resource: { _controller: walisymfonywaliBundle:Nasabah:delete}
+
+    prefix:   /delete
+
+

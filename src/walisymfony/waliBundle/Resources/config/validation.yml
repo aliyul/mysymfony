@@ -1,0 +1,32 @@
+#walisymfony\waliBundle\Entity\Nasabah:
+  #properties:
+
+       # nocredit:
+          #- NotBlank : { message: 'nasabah.nocredit.not_blank' }
+          #- NotBlank: ~
+          #        - Callback : [validateRegisterData(array nocredit, )]
+
+  #constraints:
+  #            - Callback: [validateRegisterData]
+          #- Type:
+               # type: integer
+                #message: 'nasabah.nocredit.value'
+                    #- Length:
+                     #       min: 5
+                    #      minMessage: 'Nasabah.Nocredit.minMessage'
+                     #       max: 16
+                     #       maxMessage: 'Nasabah.Nocredit.maxMessage'
+                   # - Length : {max:16, minmessage: "Credit Number must be less than 16 characters."}
+
+       # nama:
+                   # - NotBlank: { message: 'notblank' }
+                    #- NotBlank: ~
+         #           - Callback : [validateRegisterData(array nama,)]
+                    #- Length:
+                     #       min: 5
+                        #    minMessage: 'Nasabah.Nama.minMessage'
+                        #    max: 50
+                         #   maxMessage: 'Nasabah.Nama.maxMessage'
+
+  #constraints:
+  #            - Callback: validateRegisterData(array properties)

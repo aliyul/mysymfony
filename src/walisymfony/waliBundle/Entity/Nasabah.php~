@@ -1,0 +1,97 @@
+<?php
+
+namespace walisymfony\waliBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Nasabah
+ *
+ * @ORM\Table(name="nasabah")
+ * @ORM\Entity
+ */
+class Nasabah
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nama", type="string", length=50, nullable=true)
+     */
+    private $nama;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nocredit", type="bigint", nullable=true)
+     */
+    private $nocredit;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+
+    /**
+     * Set nama
+     *
+     * @param string $nama
+     *
+     * @return Nasabah
+     */
+    public function setNama($nama)
+    {
+        $this->nama = $nama;
+
+        return $this;
+    }
+
+    /**
+     * Get nama
+     *
+     * @return string
+     */
+    public function getNama()
+    {
+        return $this->nama;
+    }
+
+    /**
+     * Set nocredit
+     *
+     * @param integer $nocredit
+     *
+     * @return Nasabah
+     */
+    public function setNocredit($nocredit)
+    {
+        $this->nocredit = $nocredit;
+
+        return $this;
+    }
+
+    /**
+     * Get nocredit
+     *
+     * @return integer
+     */
+    public function getNocredit()
+    {
+        return $this->nocredit;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

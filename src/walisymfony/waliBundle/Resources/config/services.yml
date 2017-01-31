@@ -1,0 +1,17 @@
+#services:
+#    walisymfonywali.example:
+#        class: walisymfony\waliBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+# app/config/services.yml
+#services:
+  #  app.contains_alphanumeric_validator:
+  #      class: AppBundle\Validator\Constraints\ContainsAlphanumericValidator
+   #     tags:
+    #        - { name: validator.constraint_validator }
+
+services:
+    walisymfonywali.locale_listener:
+        class: walisymfony\waliBundle\EventListener\LocaleListener
+        arguments: ['%kernel.default_locale%']
+        tags:
+            - { name: kernel.event_subscriber }

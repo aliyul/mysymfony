@@ -1,0 +1,10 @@
+# validators.en.yml
+#Nama: Please enter an nasabah name.
+#Nocredit: Please enter an credit number.
+Nasabah.Nama.notblank: Please enter an nasabah name.
+Nasabah.Nocredit.notblank: Please enter an credit number.
+Nasabah.Nama.minMessage: The Name must be more than 5 characters.
+nasabah.Nama.maxMessage: The Name must be less than 50 characters.
+Nasabah.Nocredit.minMessage: Credit Number must be more than 5 characters.
+Nasabah.Nocredit.maxMessage: Credit Number must be less than 16 characters.
+Nasabah.Nocredit.value: The value must be integer.

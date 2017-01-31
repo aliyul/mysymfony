@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nasabahs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Nocredit</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nasabah in nasabahs %}
+            <tr>
+                <td><a href="{{ path('nasabah_show', { 'id': nasabah.id }) }}">{{ nasabah.nama }}</a></td>
+                <td>{{ nasabah.nocredit }}</td>
+                <td>{{ nasabah.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('nasabah_show', { 'id': nasabah.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('nasabah_edit', { 'id': nasabah.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('nasabah_new') }}">Create a new nasabah</a>
+        </li>
+    </ul>
+{% endblock %}
